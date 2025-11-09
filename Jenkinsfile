@@ -19,12 +19,12 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Run Application') {
+        /*stage('Run Application') {
             steps {
                 // run the packaged jar (adjust path/name as appropriate)
                 sh 'java -jar target/java-standalone-application-1.0-SNAPSHOT.jar'
             }
-        }
+        }*/
         stage('Test') {
             steps {
                 // run tests
