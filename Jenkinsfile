@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // checkout a specific branch from the repo
-                git branch: 'br-a-file-change', url: 'https://github.com/varmarevathy/java-standalone-application-1'
+                git branch: 'br-a-file-change-123', url: 'https://github.com/varmarevathy/java-standalone-application-1'
             }
         }
         stage('Build') {
