@@ -8,19 +8,26 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            git branch: 'br-a-file-change', url: 'https://github.com/varmarevathy/java-standalone-application-1'
+            steps {
+                // checkout a specific branch from the repo
+                git branch: 'br-a-file-change', url: 'https://github.com/varmarevathy/java-standalone-application-1'
+            }
         }
         stage('Build') {
-            // write your logic here
-            sh 'mvn clean package'
+            steps {
+                // build the project
+                sh 'mvn clean package'
+            }
         }
         stage('Run Application') {
-            // write your logic here
-            sh 'java -jar target/java-standalone-application-1.0-SNAPSHOT.jar'
+            steps {
+                // run the packaged jar (adjust path/name as appropriate)
+                sh 'java -jar target/java-standalone-application-1.0-SNAPSHOT.jar'
+            }
         }
         stage('Test') {
-            // write your logic here
-            steps{
+            steps {
+                // run tests
                 sh 'mvn test'
             }
             post {
