@@ -1,0 +1,18 @@
+# Build output
+target/
+bin/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+.metadata/
+.factorypath
+.loadpath
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
